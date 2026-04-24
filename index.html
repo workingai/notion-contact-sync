@@ -248,8 +248,8 @@
             statusMsg.className = 'status-msg';
 
             try {
-                // 로컬 서버로 데이터 전송 (포트 3000 사용 예정)
-                const response = await fetch('http://localhost:3000/api/notion', {
+                // Vercel 및 로컬 모두에서 작동하도록 상대 경로 사용
+                const response = await fetch('/api/notion', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
